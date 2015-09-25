@@ -6,9 +6,10 @@ var
 	morgan = require('morgan'),
 	User = require('./app/models/User'),
 	Scotch = require('./app/models/Scotch'),
-	apiRouter = require('./app/routes/userRoutes');
+	userRouter = require('./app/routes/userRoutes')
+	scotchRouter = require('./app/routes/scotchRoutes');
 
-mongoose.connect('localhost:3000/men_user_app')
+mongoose.connect('localhost:27017/men_user_app')
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
@@ -16,7 +17,5 @@ app.use(morgan('dev'))
 
 app.use('/api', apiRouter)
 
-// app.listen(8080)
-// console.log("server is running on port 8080")
-
-ls;dkjflksadf;lkj;kelklwefio;wejf;;aowifjsdlknvnjksfnksndflkjsdnfjlknsdkjfskldafnlkjasdnfljklsadjnfjkwelkjfnjnkjk
+app.listen(9001)
+console.log("server is running on port 9001")
